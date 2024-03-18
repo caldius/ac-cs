@@ -1,0 +1,1 @@
+sudo cp -r -i ~/develop/ac-cs/template/cs/ -t ~/.config/atcoder-cli-nodejs/

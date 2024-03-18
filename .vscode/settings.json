@@ -1,0 +1,6 @@
+{
+    "editor.formatOnSave": true
+    ,
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "dotnet.preferVisualStudioCodeFileSystemWatcher": false
+}
