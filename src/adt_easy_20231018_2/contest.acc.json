@@ -1,0 +1,64 @@
+{
+  "contest": {
+    "id": "adt_easy_20231018_2",
+    "title": "AtCoder Daily Training EASY 2023/10/18 18:00start",
+    "url": "https://atcoder.jp/contests/adt_easy_20231018_2"
+  },
+  "tasks": [
+    {
+      "id": "abc282_a",
+      "label": "A",
+      "title": "Generalized ABC",
+      "url": "https://atcoder.jp/contests/adt_easy_20231018_2/tasks/abc282_a",
+      "directory": {
+        "path": "a",
+        "testdir": "test",
+        "submit": "Program.cs"
+      }
+    },
+    {
+      "id": "abc265_a",
+      "label": "B",
+      "title": "Apple",
+      "url": "https://atcoder.jp/contests/adt_easy_20231018_2/tasks/abc265_a",
+      "directory": {
+        "path": "b",
+        "testdir": "test",
+        "submit": "Program.cs"
+      }
+    },
+    {
+      "id": "abc220_b",
+      "label": "C",
+      "title": "Base K",
+      "url": "https://atcoder.jp/contests/adt_easy_20231018_2/tasks/abc220_b",
+      "directory": {
+        "path": "c",
+        "testdir": "test",
+        "submit": "Program.cs"
+      }
+    },
+    {
+      "id": "abc263_b",
+      "label": "D",
+      "title": "Ancestor",
+      "url": "https://atcoder.jp/contests/adt_easy_20231018_2/tasks/abc263_b",
+      "directory": {
+        "path": "d",
+        "testdir": "test",
+        "submit": "Program.cs"
+      }
+    },
+    {
+      "id": "abc237_c",
+      "label": "E",
+      "title": "kasaka",
+      "url": "https://atcoder.jp/contests/adt_easy_20231018_2/tasks/abc237_c",
+      "directory": {
+        "path": "e",
+        "testdir": "test",
+        "submit": "Program.cs"
+      }
+    }
+  ]
+}

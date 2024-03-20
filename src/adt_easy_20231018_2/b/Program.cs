@@ -29,23 +29,34 @@ namespace x
                 sr = new Scanner(Console.OpenStandardInput(), bufferSize: 65536);
             }
 
-            Console.WriteLine("Yes");
+            var (X, Y, N) = sr.III();
+
+            var isYBetter = X * 3 >= Y;
+
+            var price = isYBetter ? ((N / 3) * Y) + ((N % 3) * X) : N * X;
+
+            Console.WriteLine(price);
 
         }
     }
-
     class Scanner : StreamReader
     {
-        public Scanner(Stream stream) : base(stream) { }
-        public Scanner(Stream stream, int bufferSize) : base(stream, bufferSize: bufferSize) { }
+
+        // Stream stream;
+
+        // int bufferSize;
+
+        public Scanner(Stream stream) : base(stream)
+        {
+            // this.stream = stream;
+        }
+
+        public Scanner(Stream stream, int bufferSize) : base(stream, bufferSize: bufferSize)
+        {
+            // this.stream = stream; this.bufferSize = bufferSize;
+        }
 
         public string S() => this.ReadLine();
-
-        public (string, string) SS()
-        {
-            var hoge = this.ReadLine().Split(" ");
-            return (hoge[0], hoge[1]);
-        }
         public int I() => int.Parse(this.ReadLine());
 
 

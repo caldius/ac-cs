@@ -16,10 +16,8 @@ namespace x
             {
                 //F5実行時
                 var fuga = """
-                3 3
-                2 1 2
-                2 2 3
-                2 1 3
+                2
+                11000011010011010 11000011010011110
                 """;
 
                 sr = new Scanner(new MemoryStream(System.Text.Encoding.UTF8.GetBytes(fuga)));
@@ -29,8 +27,13 @@ namespace x
                 sr = new Scanner(Console.OpenStandardInput(), bufferSize: 65536);
             }
 
-            Console.WriteLine("Yes");
+            var K = sr.I();
+            var (A, B) = sr.SS();
 
+            var convAXX = A.Reverse().Select((x, i) => Int64.Parse(x.ToString()) * Convert.ToInt32(Math.Pow(K, i))).Sum();
+            var convBXX = B.Reverse().Select((x, i) => Int64.Parse(x.ToString()) * Convert.ToInt32(Math.Pow(K, i))).Sum();
+
+            Console.WriteLine(convAXX * convBXX);
         }
     }
 

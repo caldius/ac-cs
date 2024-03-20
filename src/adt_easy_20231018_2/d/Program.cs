@@ -29,7 +29,24 @@ namespace x
                 sr = new Scanner(Console.OpenStandardInput(), bufferSize: 65536);
             }
 
-            Console.WriteLine("Yes");
+            var N = sr.I();
+            var Ps = sr.IALL();
+
+
+            var count = 1;
+            var curr = N;
+
+            while (true)
+            {
+                var tmp = Ps[curr - 2];
+                if (tmp == 1) break;
+
+                curr = tmp;
+
+                count += 1;
+            }
+
+            Console.WriteLine(count);
 
         }
     }

@@ -16,10 +16,7 @@ namespace x
             {
                 //F5実行時
                 var fuga = """
-                3 3
-                2 1 2
-                2 2 3
-                2 1 3
+                php
                 """;
 
                 sr = new Scanner(new MemoryStream(System.Text.Encoding.UTF8.GetBytes(fuga)));
@@ -29,7 +26,47 @@ namespace x
                 sr = new Scanner(Console.OpenStandardInput(), bufferSize: 65536);
             }
 
-            Console.WriteLine("Yes");
+            var S = sr.S();
+
+            if (S.Replace("a", "").Length == 0)
+            {
+                Console.WriteLine("Yes");
+                return;
+            }
+
+            var leftACountXX = 0;
+            var rightACountXX = 0;
+
+            foreach (var c in S)
+            {
+                if (c != 'a') { break; }
+                leftACountXX++;
+            }
+
+            foreach (var c in S.Reverse())
+            {
+                if (c != 'a') { break; }
+                rightACountXX++;
+            }
+
+            if (leftACountXX > rightACountXX)
+            {
+                Console.WriteLine("No");
+                return;
+            }
+
+            var maybeKaibun = new String('a', (rightACountXX - leftACountXX)) + S;
+
+            if (maybeKaibun == new string(maybeKaibun.Reverse().ToArray()))
+            {
+                Console.WriteLine("Yes");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("No");
+                return;
+            }
 
         }
     }
